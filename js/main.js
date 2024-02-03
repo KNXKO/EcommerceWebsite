@@ -3,13 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   let cart = document.querySelector(".cart");
   let closeCart = document.querySelector("#close-cart");
 
-  // Open Cart
-  cartIcon.onclick = () => {
-    cart.classList.add("active");
-  };
+  if (cartIcon && cart && closeCart) {
+    // Open Cart
+    cartIcon.onclick = () => {
+      cart.classList.add("cart-active");
+      console.log("click");
+    };
 
-  // Close Cart
-  closeCart.onclick = () => {
-    cart.classList.remove("active");
-  };
+    // Close Cart
+    closeCart.addEventListener("click", () => {
+      cart.classList.remove("cart-active");
+    });
+  } else {
+    console.error("One or more elements not found!");
+  }
 });
