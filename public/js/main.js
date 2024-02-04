@@ -198,3 +198,12 @@ document.addEventListener("DOMContentLoaded", () => {
     cartIcon.setAttribute("data-quantity", quantity);
   }
 });
+
+//Clear cart item after successful payment
+
+function clearCart() {
+  var cartContent = document.getElementsByClassName("cart-content")[0];
+  cartContent.innerHTML = "";
+  updateTotal();
+  localStorage.removeItem("cartItems");
+}
