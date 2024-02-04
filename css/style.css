@@ -62,11 +62,11 @@ header {
   font-size: 1.8rem;
   cursor: pointer;
 }
-#cart-icon[data-quantity]::after {
+#cart-icon[data-quantity="0"]::after {
   contain: "";
 }
 #cart-icon[data-quantity]::after {
-  content: "";
+  content: attr(data-quantity);
   position: absolute;
   top: 0;
   right: -12px;
