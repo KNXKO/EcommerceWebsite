@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var title =
       shopProducts.getElementsByClassName("product-title")[0].innerText;
     var price = shopProducts.getElementsByClassName("price")[0].innerText;
-    var productImg = shopProducts.querySelector(".product img").src;
+    var productImg = shopProducts.getElementsByClassName("product img")[0].src;
 
     addProductToCart(title, price, productImg);
     updateTotal();
@@ -124,9 +124,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     total = Math.round(total * 100) / 100;
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
-  }
-  function addCartClicked(event) {
-    console.log("Add to Cart clicked!");
-    // rest of the code...
   }
 });
