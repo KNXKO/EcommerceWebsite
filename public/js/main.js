@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonClicked.parentElement.remove();
     updateTotal();
     saveCartItems();
-    updateCartIcon()
+    updateCartIcon();
   }
   //Quantity Change
   function quantityChanged(event) {
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     updateTotal();
     saveCartItems();
-    updateCartIcon()
+    updateCartIcon();
   }
   //Add to cart Function
   function addCartClicked(event) {
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addProductToCart(title, price, productImg);
     updateTotal();
     saveCartItems();
-    updateCartIcon()
+    updateCartIcon();
   }
   function addProductToCart(title, price, productImg) {
     var cartShopBox = document.createElement("div");
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .getElementsByClassName("cart-quantity")[0]
       .addEventListener("change", quantityChanged);
     saveCartItems();
-    updateCartIcon()
+    updateCartIcon();
   }
 
   //Update Total
@@ -144,10 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
     var cartItems = [];
 
     for (var i = 0; i < cartBoxes.length; i++) {
-      cartBox = cartBoxes[i];
+      var cartBox = cartBoxes[i];
       var titleElement =
         cartBox.getElementsByClassName("cart-product-title")[0];
-      var priceElement = cart.getElementsByClassName("cart-price")[0];
+      var priceElement = cartBox.getElementsByClassName("cart-price")[0];
       var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
       var productImg = cartBox.getElementsByClassName("cart-img")[0].src;
 
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementsByClassName("total-price")[0].innerText =
         "$" + cartTotal;
     }
-    updateCartIcon()
+    updateCartIcon();
   }
   //Quantity in Cart Icon
   function updateCartIcon() {

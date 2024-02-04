@@ -1,0 +1,19 @@
+{
+  "name": "ecommercewebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express.js": "^1.0.0",
+    "nodemon": "^3.0.3",
+    "stripe": "^14.14.0"
+  }
+}
